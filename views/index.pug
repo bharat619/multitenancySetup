@@ -1,0 +1,19 @@
+extends layout
+include mixins/_resultRow
+block content
+
+  br
+  a(href="/") Home
+  br
+  table
+    tr
+      th First Name
+      th Last Name
+        each item in items
+          +resultRow(item)
+  br
+
+  form(action="/addRecord" method=POST)
+    button(style="width:200px" ) Add Record to Employee
+
+
